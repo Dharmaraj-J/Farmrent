@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farmrent</title>
+  <link rel="stylesheet" href="{% static 'login.css' %}">
+</head>
+
+<body>
+  <header>
+    {% if messages %}
+    <div class="messages" style=" color:white;">
+      {% for message in messages %}
+      <p class="{{ message.tags }}">{{ message }}</p>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </header>
+  <div class="container">
+    <form action="/handellogin" method="post">
+      {% csrf_token %}
+      <h3>Login</h3>
+      <label for="username">Username:</label>
+      <input type="text" placeholder="Enter Username" size="40" name="username" required><br>
+      <label for="username">Password:</label><br>
+      <input type="password" placeholder="Enter Password" size="40" name="password" required>
+      <br><br>
+
+      <h5>Don't have an account? <a style="text-decoration: none;" href="/registerpage">Sign up</a></h5>
+      <h5>Do you want to go homepage? <a style="text-decoration: none;" href="/">Home page</a></h5>
+
+      <button id="submit">Submit</button>
+
+
+
+      <div class="shape1"></div>
+      <div class="shape2"></div>
+      <div class="shape3"></div>
+      <div class="shape4"></div>
+    </form>
+  </div>
+</body>
+
+</html>

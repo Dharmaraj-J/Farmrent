@@ -1,0 +1,81 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmRent</title>
+    <link rel="stylesheet" href="{% static 'addequipment.css' %}">
+</head>
+
+<body>
+    <header>
+        {% if messages %}
+        <div class="messages" style="color: blue;">
+            {% for message in messages %}
+            <p class="{{ message.tags }}">{{ message }}</p>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </header>
+
+    <nav>
+        <ul>
+            <a href="/rentalmanagerpage">
+                <li>Home</li>
+            </a>
+            <a href="/addequipment">
+                <li>Add Equipment</li>
+            </a>
+            <a href="/editequipment">
+                <li>Edit Details of Equipment</li>
+            </a>
+            <a href="/handlelogout" class="logout-button">Logout</a>
+        </ul>
+        <div class="handle">Menu</div>
+    </nav>
+
+    <div class="con">
+        <h1 id="title">Add Equipment</h1>
+
+
+        <form action="add" method="post" id="survey-form" enctype="multipart/form-data">
+            {% csrf_token %}
+            <fieldset>
+                <label for="name" id="name-label">Enter Equipment Name
+                    <input type="text" name="equipmentname" id="name" required placeholder="Enter Equipment Name" />
+                </label>
+                <label for="rent" id="rent-label">Rent
+                    <input type="number" name="rent" id="rent" required placeholder="Enter per day rent amount" />
+                </label>
+                <label for="description" id="description-label">Enter Description
+                    <input type="text" name="description" id="description" required placeholder="Enter Description" />
+                </label>
+            </fieldset>
+            <fieldset>
+                <label for="old" id="old-label">How old is the equipment?
+                    <input type="number" name="old" id="old" required placeholder="Enter the equipment age in years" />
+                </label>
+                <label for="img1" id="img1-label">Image 1
+                    <input type="file" id="img1" name="img1" accept="image/*">
+                </label>
+                <label for="img2" id="img2-label">Image 2
+                    <input type="file" id="img2" name="img2" accept="image/*">
+                </label>
+            </fieldset>
+            <input type="submit" value="Submit" id="submit">
+        </form>
+    </div>
+
+    <script>
+        $('.handle').on('click', function () {
+            $('nav ul').toggleClass('showing');
+        });
+    </script>
+</body>
+
+</html>

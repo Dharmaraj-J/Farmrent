@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmrent</title>
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Farmrent</div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="loginpage">Login</a></li>
+                <li><a href="registerpage">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero-section">
+        <div class="overlay"></div>
+        <img src="{% static 'tim-mossholder-xDwEa2kaeJA-unsplash.jpg' %}" alt="Farm Equipment" class="hero-image">
+        <div class="hero-text">
+            <h1>Connecting Farmers and Equipment Owners</h1>
+            <p>Rent equipment easily.</p>
+        </div>
+    </div>
+
+    <section id="about" class="about-section">
+        <h2>About Farmrent</h2>
+        <p>Farmrent is a platform that connects farmers with equipment owners. Farmers can easily rent equipment while
+            equipment owners can list their machinery for rent. Our mission is to make farming more accessible and
+            efficient through easy access to necessary tools and machinery.</p>
+    </section>
+
+    <footer>
+        <p>© 2024 Dharmaraj. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

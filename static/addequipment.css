@@ -1,0 +1,187 @@
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: "Roboto Condensed", sans-serif;
+  background: #393e46; /* Dark background */
+  color: #eeeeee;
+}
+
+h1,
+p {
+  margin: 30px auto;
+  text-align: center;
+  color: #eeeeee;
+  margin-top: 0px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: #5f8d4e; /* Green color for the header */
+  color: white;
+}
+
+nav {
+  background-color: #4b6e32; /* Natural green for the navbar */
+  text-align: center;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  display: block;
+}
+
+nav ul a:hover {
+  background-color: #6f9d44; /* Slightly lighter green on hover */
+}
+
+.logout-button {
+  padding: 8px 15px;
+  background-color: #4b6e32; /* Matching green color for logout */
+  border: none;
+  border-radius: 12px;
+  color: white;
+  cursor: pointer;
+  font-size: 1.2em;
+  margin-top: 14px;
+  margin-right: 24px;
+  height: 40px;
+  width: 107px;
+  text-align: center;
+  text-decoration: none; /* Remove underline from links */
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #6f9d44; /* Lighter green on hover */
+}
+
+.con {
+  background: url(/static/images/farming1.jpg);
+  background-size: 100% 100%;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 8px;
+  max-width: 600px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  max-width: 600px;
+  min-width: 300px;
+  margin: 0 auto;
+  background-color: #e5f3df; /* Light green background */
+  border: 2px solid #4b6e32; /* Dark green border */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for a "crispy" effect */
+  padding: 20px;
+}
+
+fieldset {
+  border: none;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+}
+
+fieldset:not(:last-of-type) {
+  border-bottom: 2px solid #8c9a72; /* Lighter green divider */
+}
+
+label {
+  display: block;
+  margin: 15px 0;
+  font-weight: bold;
+  color: #4b6e32; /* Dark green label text */
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #cdd9c3; /* Light green border */
+  border-radius: 5px;
+  background: #f0f5eb; /* Very light green for inputs */
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #4b6e32; /* Darker green on focus */
+  outline: none;
+  box-shadow: 0 0 5px rgba(75, 110, 50, 0.3); /* Subtle green glow */
+}
+
+input[type="submit"] {
+  display: block;
+  margin: 20px auto;
+  width: 60%;
+  padding: 10px 0;
+  font-size: 18px;
+  background-color: #4b6e32; /* Matching green color */
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #6f9d44; /* Slightly lighter green on hover */
+}
+
+.handle {
+  display: none; /* Hidden by default for larger screens */
+}
+
+@media screen and (max-width: 580px) {
+  nav ul {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s;
+  }
+
+  nav ul.showing {
+    max-height: 20em; /* Expand when showing */
+  }
+
+  nav ul li {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+    text-align: left;
+  }
+
+  .handle {
+    display: block;
+    padding: 15px;
+    background-color: #4b6e32; /* Same color as navbar */
+    color: white;
+    cursor: pointer;
+    text-align: left;
+  }
+
+  .con {
+    max-width: 90%;
+  }
+}

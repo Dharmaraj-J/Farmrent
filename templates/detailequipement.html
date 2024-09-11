@@ -1,0 +1,75 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipment Details</title>
+    <link rel="stylesheet" href="{% static 'detailequipment.css' %}">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap' rel='stylesheet'>
+</head>
+
+<body>
+    <header>
+        {% if messages %}
+        <div class="messages">
+            {% for message in messages %}
+            <p class="{{ message.tags }}">{{ message }}</p>
+            {% endfor %}
+        </div>
+        {% endif %}
+        <nav>
+            <ul class="navbar">
+                <li><a href="/customerpage">Home</a></li>
+                <li><a href="/searchpage">Search</a></li>
+                <li><a href="/requests">Requests</a></li>
+                <li><a href="/handlelogout" class="button">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="equipment-details">
+            <div class="equipment-images">
+                <div class="equipment-image">
+                    <img src="/media/{{ equipment.image1 }}" alt="{{ equipment.equipmentname }} Image 1">
+                </div>
+                <div class="equipment-image">
+                    <img src="/media/{{ equipment.image2 }}" alt="{{ equipment.equipmentname }} Image 2">
+                </div>
+            </div>
+            <div class="equipment-info">
+                <h1>{{ equipment.equipmentname }}</h1>
+                <p><strong>Description:</strong> {{ equipment.description }}</p>
+                <p><strong>Age:</strong> {{ equipment.old }} years</p>
+                <p><strong>Rent:</strong> {{ equipment.rent }} per day</p>
+
+                <p><strong>Holder Name:</strong> {{ equipment.username }}</p>
+                <p><strong>Phone Number:</strong> {{ equipment.phone_no }}</p>
+                <p><strong>Address:</strong></p>
+                <p>Village: {{ equipment.village }}</p>
+                <p>Taluka: {{ equipment.taluka }}</p>
+                <p>District: {{ equipment.district }}</p>
+
+                <form action="/apply/{{equipment.equipment_id}}" method="post">
+                    {% csrf_token %}
+                    <p>
+                        <label for="take_date"><strong>Take Date:</strong></label>
+                        <input type="date" id="take_date" name="take" required>
+                    </p>
+                    <p>
+                        <label for="return_date"><strong>Return Date:</strong></label>
+                        <input type="date" id="return_date" name="give" required>
+                    </p>
+                    <button type="submit" class="rent-button">Rent this Equipment</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

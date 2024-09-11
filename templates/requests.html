@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmRent - Requests</title>
+    <link rel="stylesheet" href="{% static 'requests.css' %}">
+</head>
+
+<body>
+    <header>
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li class="{{ message.tags }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        <nav>
+            <ul class="navbar">
+                <li><a href="/customerpage">Home</a></li>
+                <li><a href="/searchpage">Search</a></li>
+                <li><a href="/requests">Requests</a></li>
+                <li><a href="/handlelogout" class="logout-button">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="mainbox">
+            <div class="innerbox">Equipment Name</div>
+            <div class="innerbox">Equipment Holder Phone Number</div>
+            <div class="innerbox">Rent</div>
+            <div class="innerbox">Take Date</div>
+            <div class="innerbox">Give Date</div>
+            <div class="innerbox">Total Rent</div>
+            <div class="innerbox">Address of Equipment Holder</div>
+            <div class="innerbox">Status</div>
+        </div>
+        {% for i in requests %}
+        <div class="mainbox1">
+            <div class="innerbox1">{{ i.equipment_name }}</div>
+            <div class="innerbox1">{{ i.equipmentholder_phone_no }}</div>
+            <div class="innerbox1">{{ i.rent }}</div>
+            <div class="innerbox1">{{ i.take_date }}</div>
+            <div class="innerbox1">{{ i.give_date }}</div>
+            <div class="innerbox1">{{ i.total_rent }}</div>
+            <div class="innerbox1">
+                Village: {{ i.equipmentholder_village }}<br>
+                Taluka: {{ i.equipmentholder_taluka }}<br>
+                District: {{ i.equipmentholder_district }}
+            </div>
+            <div class="innerbox1">
+                <button class="status-button {{ i.request_status|lower }}">{{ i.request_status }}</button>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+
+</html>

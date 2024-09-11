@@ -1,0 +1,155 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #eef2e6; /* Light natural background */
+  color: #333;
+}
+
+h1 {
+  font-family: "Patua One", cursive;
+  text-align: center;
+  margin: 20px 0;
+  color: #3d5630; /* Dark green for a natural theme */
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: #5f8d4e; /* Green color for the header */
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+  background-color: #4b6e32; /* Natural green for the navbar */
+  margin: 0;
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar li a,
+.navbar li button a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  display: block;
+}
+
+.navbar li a:hover {
+  background-color: #6f9d44; /* Slightly lighter green on hover */
+}
+
+.logout-button {
+  padding: 8px 15px;
+  /* Soft red color for logout */
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease; /* Smooth transition */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.logout-button:hover {
+  background-color: #e06060; /* Darker red on hover */
+}
+
+.container {
+  padding: 20px;
+}
+
+.mainbox,
+.mainbox1 {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* Seven columns layout */
+  gap: 10px;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #f8f3e6; /* Light beige background */
+  border: 1px solid #d6d0c4;
+  border-radius: 8px;
+}
+
+.innerbox,
+.innerbox1 {
+  padding: 10px;
+  text-align: center;
+  border-radius: 4px;
+  background: #fff7e1; /* Soft wheat background */
+}
+
+.innerbox1 {
+  background: #ffffff; /* White background for content */
+  border: 1px solid #ddd;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.b1,
+.b2 {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.b1 {
+  background-color: #76c776; /* Green for Accept */
+  color: white;
+}
+
+.b2 {
+  background-color: #d96d6d; /* Red for Reject */
+  color: white;
+}
+
+.b1:hover {
+  background-color: #5fa45f; /* Darker green on hover */
+}
+
+.b2:hover {
+  background-color: #c65353; /* Darker red on hover */
+}
+
+.handle {
+  display: none; /* Hidden by default for larger screens */
+}
+
+@media screen and (max-width: 580px) {
+  .navbar {
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s;
+  }
+  .navbar.showing {
+    max-height: 300px; /* Expand when showing */
+  }
+  .handle {
+    display: block;
+    padding: 15px;
+    background-color: #4b6e32; /* Same color as navbar */
+    color: white;
+    cursor: pointer;
+    text-align: left;
+  }
+  .mainbox,
+  .mainbox1 {
+    grid-template-columns: repeat(1, 1fr); /* Stack on smaller screens */
+  }
+}
