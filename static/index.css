@@ -14,11 +14,16 @@ body {
 }
 
 header {
-  background-color: #4b6e32; /* Match green color */
-  padding: 20px 30px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: #5f8d4e;
+  color: white;
 }
 
 .navbar {
+  background-color: #4b6e32;
+  padding: 20px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -46,7 +51,20 @@ header {
 }
 
 .nav-links a:hover {
-  color: #9acd32;
+  color: white;
+}
+
+.navbar li a,
+.navbar li button a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  display: block;
+}
+
+.navbar li a:hover {
+  background-color: #6f9d44;
 }
 
 .hero-section {

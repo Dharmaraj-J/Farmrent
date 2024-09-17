@@ -6,34 +6,45 @@ body {
   background-color: #f0efe5; /* Light, earthy background */
   color: #4b4b4b; /* Dark gray for readability */
 }
+h1 {
+  font-family: "Patua One", cursive;
+  text-align: center;
+  margin: 20px 0;
+  color: #3d5630;
+}
 
 header {
-  background-color: #6b8e23; /* Olive green for a natural touch */
-  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: #5f8d4e;
+  color: white;
 }
 
 .navbar {
   display: flex;
-  justify-content: center; /* Center the navbar */
-  list-style: none;
+  justify-content: center;
   padding: 0;
+  list-style: none;
+  background-color: #4b6e32;
   margin: 0;
 }
 
 .navbar li {
-  margin-right: 20px;
+  margin: 0 15px;
 }
 
-.navbar li a {
+.navbar li a,
+.navbar li button a {
   color: white;
   text-decoration: none;
-  padding: 8px 12px;
+  padding: 10px 15px;
   border-radius: 4px;
-  transition: background 0.3s;
+  display: block;
 }
 
 .navbar li a:hover {
-  background-color: #556b2f; /* Darker green for hover */
+  background-color: #6f9d44;
 }
 
 .container {

@@ -42,9 +42,9 @@ class Equipment(models.Model):
     equipmentname=models.CharField(max_length=75,default="")
     rent=models.IntegerField()
     
-    image1= models.ImageField(upload_to="constructapp/images",default="")
+    image1= models.ImageField(upload_to="farmapp/images",default="")
 
-    image2= models.ImageField(upload_to="constructapp/images",default="")
+    image2= models.ImageField(upload_to="farmapp/images",default="")
 
     def __str__(self):
         return self.username

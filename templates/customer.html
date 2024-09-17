@@ -13,26 +13,32 @@
 </head>
 
 <body>
+
     <header>
         {% if messages %}
-        <div class="messages">
+        <div class="messages" style="color:White;">
             {% for message in messages %}
             <p class="{{ message.tags }}">{{ message }}</p>
             {% endfor %}
         </div>
         {% endif %}
-        <nav>
-            <ul class="navbar">
-                <li><a href="/customerpage">Home</a></li>
-                <li><a href="/searchpage">Search</a></li>
-                <li><a href="/requests">Requests</a></li>
-                <li><a href="/handlelogout" class="button">Logout</a></li>
-            </ul>
-        </nav>
     </header>
 
+    <h1>Welcome {{name}}!</h1>
+
+
+    <nav>
+        <ul class="navbar">
+            <li><a href="/customerpage">Home</a></li>
+            <li><a href="/searchpage">Search</a></li>
+            <li><a href="/requests">Requests</a></li>
+            <li><a href="/handlelogout" class="button">Logout</a></li>
+        </ul>
+    </nav>
+
+
     <main>
-        <h1>Welcome {{ name }}!</h1>
+
         <div class="container">
             <div class="equipment-grid">
                 {% for i in allequipments %}

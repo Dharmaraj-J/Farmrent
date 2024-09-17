@@ -18,30 +18,25 @@ header {
   display: flex;
   justify-content: center;
   padding: 10px;
-  background-color: #5f8d4e; /* Green color for the header */
+  background-color: #5f8d4e;
   color: white;
 }
 
-nav {
-  background-color: #4b6e32; /* Natural green for the navbar */
-  text-align: center;
-  padding: 10px 0;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.navbar {
   display: flex;
   justify-content: center;
-  align-items: center;
+  padding: 0;
+  list-style: none;
+  background-color: #4b6e32;
+  margin: 0;
 }
 
-nav ul li {
+.navbar li {
   margin: 0 15px;
 }
 
-nav ul a {
+.navbar li a,
+.navbar li button a {
   color: white;
   text-decoration: none;
   padding: 10px 15px;
@@ -49,29 +44,8 @@ nav ul a {
   display: block;
 }
 
-nav ul a:hover {
-  background-color: #6f9d44; /* Slightly lighter green on hover */
-}
-
-.logout-button {
-  padding: 8px 15px;
-  background-color: #4b6e32; /* Matching green color for logout */
-  border: none;
-  border-radius: 12px;
-  color: white;
-  cursor: pointer;
-  font-size: 1.2em;
-  margin-top: 14px;
-  margin-right: 24px;
-  height: 40px;
-  width: 107px;
-  text-align: center;
-  text-decoration: none; /* Remove underline from links */
-  transition: background-color 0.3s ease;
-}
-
-.logout-button:hover {
-  background-color: #6f9d44; /* Lighter green on hover */
+.navbar li a:hover {
+  background-color: #6f9d44;
 }
 
 .con {

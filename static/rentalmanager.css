@@ -10,14 +10,14 @@ h1 {
   font-family: "Patua One", cursive;
   text-align: center;
   margin: 20px 0;
-  color: #3d5630; /* Dark green for a natural theme */
+  color: #3d5630;
 }
 
 header {
   display: flex;
   justify-content: center;
   padding: 10px;
-  background-color: #5f8d4e; /* Green color for the header */
+  background-color: #5f8d4e;
   color: white;
 }
 
@@ -26,7 +26,7 @@ header {
   justify-content: center;
   padding: 0;
   list-style: none;
-  background-color: #4b6e32; /* Natural green for the navbar */
+  background-color: #4b6e32;
   margin: 0;
 }
 
@@ -44,23 +44,7 @@ header {
 }
 
 .navbar li a:hover {
-  background-color: #6f9d44; /* Slightly lighter green on hover */
-}
-
-.logout-button {
-  padding: 8px 15px;
-  /* Soft red color for logout */
-  border: none;
-  border-radius: 5px;
-  color: white;
-  cursor: pointer;
-  font-size: 0.9em;
-  transition: background-color 0.3s ease; /* Smooth transition */
-  text-decoration: none; /* Remove underline from links */
-}
-
-.logout-button:hover {
-  background-color: #e06060; /* Darker red on hover */
+  background-color: #6f9d44;
 }
 
 .container {

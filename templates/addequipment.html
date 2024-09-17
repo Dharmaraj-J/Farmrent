@@ -13,9 +13,10 @@
 </head>
 
 <body>
+
     <header>
         {% if messages %}
-        <div class="messages" style="color: blue;">
+        <div class="messages" style="color:White;">
             {% for message in messages %}
             <p class="{{ message.tags }}">{{ message }}</p>
             {% endfor %}
@@ -24,20 +25,15 @@
     </header>
 
     <nav>
-        <ul>
-            <a href="/rentalmanagerpage">
-                <li>Home</li>
-            </a>
-            <a href="/addequipment">
-                <li>Add Equipment</li>
-            </a>
-            <a href="/editequipment">
-                <li>Edit Details of Equipment</li>
-            </a>
-            <a href="/handlelogout" class="logout-button">Logout</a>
+        <ul class="navbar">
+            <li><a href="/rentalmanagerpage">Home</a></li>
+            <li><a href="/addequipment">Add Equipment</a></li>
+            <li><a href="/editequipment">Edit Equipment Details</a></li>
+            <li><a href="/handlelogout">Logout</a></li>
         </ul>
         <div class="handle">Menu</div>
     </nav>
+
 
     <div class="con">
         <h1 id="title">Add Equipment</h1>

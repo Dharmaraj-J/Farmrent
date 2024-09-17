@@ -10,17 +10,29 @@
 </head>
 
 <body>
+    {% if messages %}
     <header>
-        <nav class="navbar">
-            <div class="logo">Farmrent</div>
-            <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="loginpage">Login</a></li>
-                <li><a href="registerpage">Sign Up</a></li>
-            </ul>
-        </nav>
+
+        <div class="messages" style="color:White;">
+            {% for message in messages %}
+            <p class="{{ message.tags }}">{{ message }}</p>
+            {% endfor %}
+        </div>
+
     </header>
+    {% endif %}
+
+
+    <nav class="navbar">
+        <div class="logo">Farmrent</div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="loginpage">Login</a></li>
+            <li><a href="registerpage">Sign Up</a></li>
+        </ul>
+    </nav>
+
 
     <div class="hero-section">
         <div class="overlay"></div>
