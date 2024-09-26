@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Equipment Details</title>
+    <title>Farmrent | Equipment Details</title>
     <link rel="stylesheet" href="{% static 'detailequipment.css' %}">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap' rel='stylesheet'>
 </head>
@@ -44,7 +44,7 @@
             <div class="equipment-info">
                 <h1>{{ equipment.equipmentname }}</h1>
                 <p><strong>Description:</strong> {{ equipment.description }}</p>
-                <p><strong>Age:</strong> {{ equipment.old }} years</p>
+                <p><strong>Age of Equipment:</strong> {{ equipment.old }} years</p>
                 <p><strong>Rent:</strong> {{ equipment.rent }} per day</p>
 
                 <p><strong>Holder Name:</strong> {{ equipment.username }}</p>

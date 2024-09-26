@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FarmRent - Requests</title>
+    <title>Farmrent | Requests</title>
     <link rel="stylesheet" href="{% static 'requests.css' %}">
 </head>
 
@@ -41,6 +41,7 @@
             <div class="innerbox1">{{ i.give_date }}</div>
             <div class="innerbox1">{{ i.total_rent }}</div>
             <div class="innerbox1">
+                Name: {{i.equipmentholder_name}}
                 Village: {{ i.equipmentholder_village }}<br>
                 Taluka: {{ i.equipmentholder_taluka }}<br>
                 District: {{ i.equipmentholder_district }}

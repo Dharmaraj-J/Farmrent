@@ -39,11 +39,11 @@ body {
 .mainbox,
 .mainbox1 {
   display: grid;
-  grid-template-columns: repeat(8, 1fr); /* Eight columns layout */
+  grid-template-columns: repeat(8, 1fr);
   gap: 10px;
   padding: 10px;
   margin-bottom: 15px;
-  background-color: #f8f3e6; /* Light beige background */
+  background-color: #f8f3e6;
   border: 1px solid #d6d0c4;
   border-radius: 8px;
 }
@@ -53,11 +53,11 @@ body {
   padding: 10px;
   text-align: center;
   border-radius: 4px;
-  background: #fff7e1; /* Soft wheat background */
+  background: #fff7e1;
 }
 
 .innerbox1 {
-  background: #ffffff; /* White background for content */
+  background: #ffffff;
   border: 1px solid #ddd;
 }
 
@@ -67,34 +67,34 @@ body {
   border-radius: 4px;
   cursor: pointer;
   font-size: 0.9em;
-  transition: background-color 0.3s ease; /* Smooth transition */
+  transition: background-color 0.3s ease;
 }
 
 .pending {
-  background-color: #ffc107; /* Yellow for Pending */
+  background-color: #ffc107;
   color: white;
 }
 
 .accepted {
-  background-color: #76c776; /* Green for Accepted */
+  background-color: #76c776;
   color: white;
 }
 
 .rejected {
-  background-color: #d96d6d; /* Red for Rejected */
+  background-color: #d96d6d;
   color: white;
 }
 
 .pending:hover {
-  background-color: #e0a800; /* Darker yellow on hover */
+  background-color: #e0a800;
 }
 
 .accepted:hover {
-  background-color: #5fa45f; /* Darker green on hover */
+  background-color: #5fa45f;
 }
 
 .rejected:hover {
-  background-color: #c65353; /* Darker red on hover */
+  background-color: #c65353;
 }
 
 @media screen and (max-width: 768px) {
@@ -104,6 +104,6 @@ body {
 
   .mainbox,
   .mainbox1 {
-    grid-template-columns: repeat(1, 1fr); /* Stack on smaller screens */
+    grid-template-columns: repeat(1, 1fr);
   }
 }

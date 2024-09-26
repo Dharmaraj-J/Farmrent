@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
-  background-color: #eef2e6; /* Light natural background */
+  background-color: #eef2e6;
   color: #333;
 }
 
@@ -54,11 +54,11 @@ header {
 .mainbox,
 .mainbox1 {
   display: grid;
-  grid-template-columns: repeat(7, 1fr); /* Seven columns layout */
+  grid-template-columns: repeat(7, 1fr);
   gap: 10px;
   padding: 10px;
   margin-bottom: 15px;
-  background-color: #f8f3e6; /* Light beige background */
+  background-color: #f8f3e6;
   border: 1px solid #d6d0c4;
   border-radius: 8px;
 }
@@ -68,11 +68,11 @@ header {
   padding: 10px;
   text-align: center;
   border-radius: 4px;
-  background: #fff7e1; /* Soft wheat background */
+  background: #fff7e1;
 }
 
 .innerbox1 {
-  background: #ffffff; /* White background for content */
+  background: #ffffff;
   border: 1px solid #ddd;
 }
 
@@ -89,29 +89,29 @@ header {
   border-radius: 4px;
   cursor: pointer;
   font-size: 0.9em;
-  transition: background-color 0.3s ease; /* Smooth transition */
+  transition: background-color 0.3s ease;
 }
 
 .b1 {
-  background-color: #76c776; /* Green for Accept */
+  background-color: #76c776;
   color: white;
 }
 
 .b2 {
-  background-color: #d96d6d; /* Red for Reject */
+  background-color: #d96d6d;
   color: white;
 }
 
 .b1:hover {
-  background-color: #5fa45f; /* Darker green on hover */
+  background-color: #5fa45f;
 }
 
 .b2:hover {
-  background-color: #c65353; /* Darker red on hover */
+  background-color: #c65353;
 }
 
 .handle {
-  display: none; /* Hidden by default for larger screens */
+  display: none;
 }
 
 @media screen and (max-width: 580px) {
@@ -122,18 +122,18 @@ header {
     transition: max-height 0.4s;
   }
   .navbar.showing {
-    max-height: 300px; /* Expand when showing */
+    max-height: 300px;
   }
   .handle {
     display: block;
     padding: 15px;
-    background-color: #4b6e32; /* Same color as navbar */
+    background-color: #4b6e32;
     color: white;
     cursor: pointer;
     text-align: left;
   }
   .mainbox,
   .mainbox1 {
-    grid-template-columns: repeat(1, 1fr); /* Stack on smaller screens */
+    grid-template-columns: repeat(1, 1fr);
   }
 }
